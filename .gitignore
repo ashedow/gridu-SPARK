@@ -1,5 +1,9 @@
 .idea/
+.vscode
 *.iml
 target/
 .DS_Store
+env
 capstone-dataset
+data
+__pycache__
