@@ -7,8 +7,8 @@ from jobs.env import SQL_DEFAULT_LIMIT
 
 TOP_CAMPAIGNS = f"""
       SELECT campaignId, SUM(billingCost) as revenue 
-      FROM purchase_attribution 
-      WHERE isConfirmed = "TRUE" 
+      FROM confBillingCost 
+      WHERE isConfirmed = 'TRUE' 
       GROUP BY campaignId 
       ORDER BY revenue DESC 
       LIMIT {SQL_DEFAULT_LIMIT}
